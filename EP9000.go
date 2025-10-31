@@ -8,6 +8,7 @@ import (
 
 type EP9000 interface {
 	Listen(chan []uint8) error
+	Flush()
 }
 
 type ep9000 struct {

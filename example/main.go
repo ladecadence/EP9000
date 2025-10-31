@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	ep9000 "github.com/ladecadence/EP9000/pkg/EP9000"
+	ep9000 "github.com/ladecadence/EP9000"
 )
 
 func main() {

@@ -1,4 +1,5 @@
 module github.com/ladecadence/EP9000
+
 go 1.24.2
 
 require go.bug.st/serial v1.6.4
