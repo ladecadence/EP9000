@@ -31,6 +31,7 @@ func New(port string, speed int) (EP9000, error) {
 		return nil, err
 	}
 	ep.port.SetReadTimeout(time.Millisecond * 100)
+	ep.port.ResetInputBuffer()
 	return &ep, nil
 }
 
@@ -62,4 +63,8 @@ func (ep *ep9000) Listen(data chan []uint8) error {
 		// empty buffer
 		buffer = []uint8{}
 	}
+}
+
+func (ep *ep9000) Flush() {
+	ep.port.ResetInputBuffer()
 }
